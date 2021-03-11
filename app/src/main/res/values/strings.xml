@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Money Convert</string>
+    <string name="hongkones">Hongkones</string>
+    <string name="yan_jpy">Yan - JPY</string>
+    <string name="dolar_usd">Dolar -USD</string>
+    <string name="fr_suizo_chf">Fr. suizo - CHF</string>
+    <string name="la_moneda">La Moneda:</string>
+</resources>

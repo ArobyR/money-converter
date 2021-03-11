@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="354dp"
+        android:layout_height="156dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/Main_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2sp"
+            android:paddingStart="10sp"
+            android:paddingEnd="2sp"
+            android:text="Moneda:"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/Main_editTextMoneda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2sp"
+            android:layout_marginEnd="2sp"
+            android:ems="10"
+            android:hint="Introduce Moneda:"
+            android:inputType="textPersonName"
+            android:paddingStart="10sp"
+            android:paddingEnd="5sp" />
+
+        <TextView
+            android:id="@+id/Main_textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2sp"
+            android:paddingStart="10sp"
+            android:paddingEnd="2sp"
+            android:text="Peso:"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/Main_editTextPeso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2sp"
+            android:layout_marginEnd="2sp"
+            android:ems="10"
+            android:enabled="false"
+            android:focusable="false"
+            android:hint="Peso (DOP):"
+            android:inputType="textPersonName"
+            android:paddingStart="10sp"
+            android:paddingEnd="5sp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="359dp"
+        android:layout_height="295dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <RadioButton
+            android:id="@+id/Main_radioButtonDolar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dolar_usd"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/Main_radioButtonEuro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Euro - EUR" />
+
+        <RadioButton
+            android:id="@+id/Main_radioButtonLibra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Libra - GBP" />
+
+        <RadioButton
+            android:id="@+id/Main_radioButtonYan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yan_jpy" />
+
+        <RadioButton
+            android:id="@+id/Main_radioButtonFrancoSuizo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fr_suizo_chf"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/Main_radioButtonHongkones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hongkones"
+            tools:ignore="HardcodedText" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="239dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            android:id="@+id/main_btn_convertir_moneda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="btnConvertir_OnClick"
+            android:text="Convertir" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
